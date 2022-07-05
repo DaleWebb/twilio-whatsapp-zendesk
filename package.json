@@ -1,0 +1,27 @@
+{
+  "name": "twilio-whatsapp",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "yarn start:cli",
+    "start:aws": "sst start",
+    "start:cli": "yarn workspace @twilio-whatsapp/services dev",
+    "build": "sst build",
+    "deploy": "sst deploy --stage=production",
+    "remove": "sst remove",
+    "console": "sst console",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest"
+  },
+  "devDependencies": {
+    "aws-cdk-lib": "2.24.0",
+    "@serverless-stack/cli": "^1.2.35",
+    "@serverless-stack/resources": "^1.2.35",
+    "typescript": "~4.6.4",
+    "@tsconfig/node16": "^1.0.3",
+    "vitest": "^0.16.0"
+  },
+  "workspaces": [
+    "services"
+  ]
+}

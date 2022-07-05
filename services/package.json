@@ -1,0 +1,21 @@
+{
+  "name": "@twilio-whatsapp/services",
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "node --loader ts-node/esm --experimental-specifier-resolution=node ./cli/twilio",
+    "codegen:xstate": "xstate typegen './machines/**/machine.ts' --watch"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.1165.0",
+    "twilio": "^3.78.0",
+    "xstate": "^4.32.1"
+  },
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.101",
+    "@xstate/cli": "^0.2.1",
+    "@xstate/inspect": "^0.7.0",
+    "prettier": "^2.7.1",
+    "ts-node": "^10.8.2"
+  }
+}
